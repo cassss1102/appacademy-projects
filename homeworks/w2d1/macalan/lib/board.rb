@@ -19,16 +19,40 @@ class Board
   end
 
   def valid_move?(start_pos)
-    valid_pos = (1..6).to_a + (7..12).to_a
+    valid_pos = (1..12).to_a
     raise "Invalid starting cup" unless valid_pos.include?(start_pos)
+    raise "Invalid starting cup" if @cups[start_pos].empty?
   end
 
   def make_move(start_pos, current_player_name)
+    stones = @cups[start_pos]
+    @cups[start_pos] = []
 
+    idx = start_pos + 1
+    until stones.empty?
+      if current_player_name == @name1 && idx == 13
+        next
+      elsif current_player_name == @name2 && idx == 6
+        next
+      else
+        @cups[idx] << stones.shift
+      end
+      idx += 1
+    end
+
+    render
+    next_turn(idx)
   end
 
   def next_turn(ending_cup_idx)
     # helper method to determine what #make_move returns
+    if @cups[ending_cup_idx].length == 1
+      :switch
+    elsif ending_cup_idx == 6 || ending_cup_idx == 13
+      :promt
+    else
+      ending_cup_idx
+    end
   end
 
   def render
@@ -40,8 +64,17 @@ class Board
   end
 
   def one_side_empty?
+    (0..5).all? { |idx| @cups[idx].empty?} || (7..12).all? { |idx| @cups[idx].empty?}
   end
 
   def winner
-  end
+    player1_score = @cups[6].size
+    player2_score = @cups[13].size
+
+    if player1_score == player2_score
+      :draw
+    else
+      player1_score > player2_score ? "#{@name1} wins!" : "#{@name2} wins!"
+    end
+  end 
 end
