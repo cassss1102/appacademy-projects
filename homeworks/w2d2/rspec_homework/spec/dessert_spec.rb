@@ -45,16 +45,22 @@ describe Dessert do
       cookie.mix!
       expect(cookie.ingredients).not_to eq(ingredients)
       expect(cookie.ingredients.sort).to eq(ingredients.sort)
+    end
   end
 
   describe "#eat" do
-    it "subtracts an amount from the quantity"
+    it "subtracts an amount from the quantity" do
+
+    end
+
 
     it "raises an error if the amount is greater than the quantity"
   end
 
   describe "#serve" do
-    it "contains the titleized version of the chef's name"
+    it "contains the titleized version of the chef's name" do
+      expect()
+    end
   end
 
   describe "#make_more" do

@@ -1,0 +1,21 @@
+sudo: false
+language: ruby
+cache: bundler
+addons:
+  apt:
+    packages:
+      - libgmp-dev
+
+env:
+  - USE_MINI_PORTILE=true
+  - USE_MINI_PORTILE=false
+rvm:
+  - 1.9.3
+  - 2.0.0
+  - 2.1.7
+  - 2.2.3
+  - 2.3.0
+  - ruby-head
+matrix:
+  allow_failures:
+    - env: USE_MINI_PORTILE=false
