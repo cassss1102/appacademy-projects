@@ -7,7 +7,8 @@
 }
 
 .language-nav {
-	position: relative;
+
+	position: absolute;
 	top: -15px;
 	left: calc(50% - (177.78px/2));
 	background: white;
@@ -19,6 +20,7 @@
 }
 
 .language-nav a {
+	display: flex;
 	margin: 0 5px;
 	text-transform: uppercase;
 	font-family: $sans-serif;

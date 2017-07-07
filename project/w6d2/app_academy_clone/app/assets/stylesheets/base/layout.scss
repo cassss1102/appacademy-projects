@@ -27,9 +27,20 @@ button {
 }
 
 button:hover {
-	background-color: $light-blue;
+	background-color: $gray;
 	border-color: inherit;
 }
+
+
+.sections-nav li:hover {
+	background-color: $gray;
+}
+
+a:hover {
+	text-decoration: underline;
+}
+
+
 
 /*
 	Header Rules
