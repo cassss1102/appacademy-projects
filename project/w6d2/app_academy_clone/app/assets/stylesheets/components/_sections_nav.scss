@@ -1,9 +1,10 @@
 .sections-nav ul {
   display: flex;
   flex-direction: row;
-  align-items: center;
+  justify-content: center;
+
 }
 
 .sections-nav li {
-  margin: 0 auto;
+  margin: 5px;
 }

@@ -1,0 +1,34 @@
+.main-content p {
+  margin-bottom: 5px;
+  margin-top: 5px
+
+}
+.left-main-content ul li {
+  padding: 8px;
+}
+.main-content li {
+  list-style: initial;
+  margin-left: 15px;
+}
+
+.right-main-content ul {
+  font-weight: bold;
+  margin: 5px;
+  font-size: 10px;
+}
+
+.right-main-content li {
+  margin: 5px;
+  margin-left: 10px;
+}
+.comment {
+  color: $blue;
+}
+
+.by-line {
+  color: $gray;
+}
+
+.opinion header {
+  font-size: 12px;
+}
