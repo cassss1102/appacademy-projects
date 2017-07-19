@@ -17,7 +17,6 @@ export default class TodoForm extends Component {
   }
 
   handleSubmit(event) {
-    console.log('ping');
     event.preventDefault();
     const todo = Object.assign({}, this.state, {id: uniqueId()});
     this.props.receiveTodo(todo);
@@ -29,7 +28,7 @@ export default class TodoForm extends Component {
 
   render() {
     return (
-      <form>
+      <form onSubmit={this.handleSubmit}>
         <label>Title:
           <input
             value={this.state.title}
@@ -40,7 +39,7 @@ export default class TodoForm extends Component {
             value={this.state.body}
             onChange={this.linkState('body')}/>
         </label>
-        <button onClick={this.handleSubmit} className="btn">
+        <button className="btn">
           Create Todo!
         </button>
       </form>
