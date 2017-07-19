@@ -22,10 +22,10 @@ export default class StepForm extends Component {
     e.preventDefault();
     const step = merge({}, this.state, {id: uniqueId()});
     this.props.receiveStep(step);
-    this.state = {
+    this.setState({
       title: "",
       body: ""
-    };
+    });
   }
 
   render() {
@@ -33,18 +33,19 @@ export default class StepForm extends Component {
     return (
       <div>
         <form onSubmit={this.handleSubmit}>
-          <label>Title:</label>
-          <input
-            placeholder="walk to store"
-            value={this.state.title}
-            onChange={this.linkState('title')}
-            />
-          <label>Description:</label>
-          <textarea
-            placeholder="google store direction"
-            value={this.state.body}
-            onChange={this.linkState('title')}
-            />
+          <label>Title:
+            <input
+              placeholder="walk to store"
+              value={this.state.title}
+              onChange={this.linkState('title')} />
+            </label>
+          <label>Description:
+            <textarea
+              placeholder="google store direction"
+              value={this.state.body}
+              onChange={this.linkState('body')}>
+            </textarea>
+          </label>
           <button>Create Step!</button>
         </form>
       </div>

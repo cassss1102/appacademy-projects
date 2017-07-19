@@ -4,8 +4,8 @@ import StepListItem from './step_list_item';
 
 
 const mapDispatchToProps = (dispatch, { step }) => ({
-  receiveStep: () => dispatch(receiveStep(step)),
-  removeStep: () => dispatch(removeStep(step))
+  removeStep: () => dispatch(removeStep(step)),
+  receiveStep: (step) => dispatch(receiveStep(step))
 });
 
 export default connect(

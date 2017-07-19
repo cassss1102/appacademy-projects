@@ -1,6 +1,5 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import App from './components/app';
 import configureStore from './store/store';
 import Root from './components/root';
 import { allTodos, stepsByTodoId } from './reducers/selectors';
@@ -17,8 +16,11 @@ window.receiveSteps = receiveSteps;
 window.receiveStep = receiveStep;
 window.removeStep = removeStep;
 
+
 document.addEventListener('DOMContentLoaded', () => {
+  const preloadedState = localStorage.state ?
+    JSON.parse(localStorage.state) : {};
+  const store = configureStore(preloadedState);
   const root = document.getElementById('content');
-  const store = configureStore();
   ReactDOM.render(<Root store={ store } />, root);
 });

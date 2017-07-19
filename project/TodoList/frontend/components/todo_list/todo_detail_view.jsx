@@ -7,7 +7,7 @@ export default class TodoDetailView extends Component {
     return (
       <div>
         {todo.body}
-        <StepListContainer todo_id={ todo.id} />
+        <StepListContainer todo_id={ todo.id } />
       </div>
     );
   }
