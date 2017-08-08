@@ -23,13 +23,13 @@ export default class StepListItem extends Component {
     return (
       <div>
         <li>
-          <h3>{this.props.step.title}</h3>
+          <h4>{this.props.step.title}</h4>
           <p>{this.props.step.body}</p>
           <button
             onClick={this.toggleStep}>
-            {this.props.step.done ? 'undo' : 'done'}
+            {this.props.step.done ? 'Undo' : 'Done'}
           </button>
-          <button onClick={this.props.removeStep}>Remove Step</button>
+          <button onClick={this.props.removeStep}>Delete</button>
         </li>
       </div>
     );

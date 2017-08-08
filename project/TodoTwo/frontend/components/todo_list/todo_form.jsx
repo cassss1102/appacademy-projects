@@ -28,21 +28,28 @@ export default class TodoForm extends Component {
 
   render() {
     return (
-      <form onSubmit={this.handleSubmit}>
-        <label>Title:
-          <input
-            value={this.state.title}
-            onChange={this.linkState('title')}/>
-        </label>
-        <label>Body:
-          <input
-            value={this.state.body}
-            onChange={this.linkState('body')}/>
-        </label>
-        <button className="btn">
-          Create Todo!
-        </button>
-      </form>
+      <div className="todo-form">
+        <form onSubmit={this.handleSubmit}>
+          <div className="form">
+            <label>Title:</label>
+              <input
+                value={this.state.title}
+                onChange={this.linkState('title')}/>
+
+          </div>
+          <div className="form">
+            <label>Body:</label>
+              <textarea
+                value={this.state.body}
+                onChange={this.linkState('body')}>
+              </textarea>
+
+          </div>
+          <button className="btn">
+            Create Todo!
+          </button>
+        </form>
+      </div>
     );
   }
 }

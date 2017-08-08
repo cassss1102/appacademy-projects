@@ -31,21 +31,24 @@ export default class StepForm extends Component {
   render() {
 
     return (
-      <div>
+      <div className="step-form">
         <form onSubmit={this.handleSubmit}>
-          <label>Title:
+          <div className="form">
+            <label>Title:</label>
+              <input
+                placeholder="walk to store"
+                value={this.state.title}
+                onChange={this.linkState('title')} />
+
+          </div>
+          <div className="form">
+          <label>Description:</label>
             <input
-              placeholder="walk to store"
-              value={this.state.title}
-              onChange={this.linkState('title')} />
-            </label>
-          <label>Description:
-            <textarea
               placeholder="google store direction"
               value={this.state.body}
-              onChange={this.linkState('body')}>
-            </textarea>
-          </label>
+              onChange={this.linkState('body')} />
+
+          </div>
           <button>Create Step!</button>
         </form>
       </div>

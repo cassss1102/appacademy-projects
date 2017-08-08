@@ -1,0 +1,80 @@
+
+html,
+body,
+ul,
+p,
+h3,
+button {
+  text-align: center;
+  margin: 0;
+  padding: 0;
+  font-family: monospace;
+  border: none;
+}
+/*}
+
+.app h1 {
+  text-align: center;
+}*/
+h1 {
+  font-size: 30px;
+}
+
+body {
+  background-image: url(https://images.unsplash.com/uploads/141103282695035fa1380/95cdfeef?dpr=2&auto=format&fit=crop&w=1199&h=616&q=80&cs=tinysrgb&crop=);
+}
+
+.todo-list {
+  background: rgba(193, 196, 194, 0.5);
+  width: 50%;
+  margin: 20px auto;
+  font-family: monospace;
+  border-radius: 5px;
+  display: flex;
+  justify-content: space-around;
+  /*align-items: center;*/
+  flex-direction: column;
+}
+
+li {
+  list-style: none;
+}
+
+li a {
+  font-family: monospace;
+  font-size: 16px;
+}
+
+button {
+  margin: 5px;
+  color: rgb(111, 111, 111);
+  background: none;
+
+}
+
+.step-form {
+  background: rgba(255, 255, 255, 0.5);
+  width: 51%;
+  margin: 10px auto;
+  text-align: left;
+  padding: 10px;
+  border-radius: 5px;
+}
+
+.todo-form {
+  width: 60%;
+  margin: 10px auto;
+  text-align: left;
+}
+
+.form {
+  margin: 15px;
+  display: flex;
+  flex-direction: column;
+}
+
+/*.todo-list {
+  display: flex;
+  justify-content: space-around;
+  /*align-items: center;*/
+  /*flex-direction: column;*/

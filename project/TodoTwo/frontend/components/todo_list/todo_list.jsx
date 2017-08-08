@@ -14,7 +14,7 @@ export default class TodoList extends Component {
     );
 
     return (
-      <div>
+      <div className="todo-list">
         <ul>
           { list }
         </ul>

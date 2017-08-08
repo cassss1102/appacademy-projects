@@ -36,10 +36,10 @@ export default class TodoListItem extends Component {
     }
     return (
       <div>
-        <li>
+        <li className="list">
           <a onClick={this.toggleDetail}>{title}</a>
-          <button onClick={this.toggleTodo}>{done ? "undo" : "done" }</button>
-          <button onClick={this.handleRemove}>Delete Todo</button>
+          <button onClick={this.toggleTodo} className="statusbtn">{done ? "Undo" : "Done" }</button>
+          <button onClick={this.handleRemove} className="deletebtn">Delete</button>
           {detail}
         </li>
       </div>

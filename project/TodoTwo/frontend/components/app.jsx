@@ -2,9 +2,9 @@ import React from 'react';
 import TodoListContainer from './todo_list/todo_list_container';
 
 const App = () => (
-  <div>
-    <h1>Todo</h1>
-    <TodoListContainer />
+  <div className="app">
+    <h1>My Todo List</h1>
+    <TodoListContainer/>
   </div>
 );
 
